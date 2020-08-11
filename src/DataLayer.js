@@ -4,7 +4,7 @@ export const DataLayerContext = createContext();
 
 export const DataLayer=({initialState,reducer,children})=>
 {
-    console.log("in DataLayer");
+    //console.log("in DataLayer");
     return(
         <DataLayerContext.Provider value={useReducer(reducer,initialState)}>
             {children}
@@ -14,6 +14,6 @@ export const DataLayer=({initialState,reducer,children})=>
 
 
 export const useDataLayerValue = ()=>{
-    console.log("in DataLayer value");
+  //  console.log("in DataLayer value");
     return (useContext(DataLayerContext))
 };
